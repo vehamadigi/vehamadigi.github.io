@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connect TikTok · VehamaDIGI</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>Connect TikTok</h1>
+<p>Shop owner only. Connect the VehamaDIGI TikTok account so our publishing tool can send new product videos to your TikTok inbox as drafts. You review and post them in the TikTok app.</p>
+<p>Permissions requested: basic profile info (user.info.basic) and video upload to drafts (video.upload).</p>
+<a class="btn" id="go" href="#">Connect TikTok</a>
+<script>
+var KEY = 'sbawkc8h3q4jmel64i';
+var state = 'site-' + Math.random().toString(36).slice(2, 12);
+document.getElementById('go').href = 'https://www.tiktok.com/v2/auth/authorize/?' + new URLSearchParams({
+  client_key: KEY, response_type: 'code', scope: 'user.info.basic,video.upload',
+  redirect_uri: 'https://vehamadigi.github.io/callback.html', state: state
+});
+</script>
+</main><footer><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></footer></body></html>
